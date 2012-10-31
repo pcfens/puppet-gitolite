@@ -98,7 +98,7 @@ class gitolite (
       File["${gitolite::homedir}/${gitolite::keyname}.pub"], 
       Vcsrepo['/usr/src/gitolite'] 
     ],
-    command     => "${gitolite::srcdir}/install -ln /usr/local/bin",
+    command     => "/usr/src/gitolite/install -ln /usr/local/bin",
     user        => 'root',
     group       => 'root',
     subscribe   => Vcsrepo['/usr/src/gitolite'],
